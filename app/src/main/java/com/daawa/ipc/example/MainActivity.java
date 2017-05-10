@@ -21,10 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         mLog = (TextView) findViewById(R.id.log);
 
-        Intent serviceIntent = new Intent()
-                .setComponent(new ComponentName(
-                        "com.afollestad.aidlexamplereceiver",
-                        "com.afollestad.aidlexamplereceiver.MainService"));
+        Intent serviceIntent = new Intent().setComponent(new ComponentName("com.daawa.ipc.example.service", "com.daawa.ipc.example.service.MainService"));
         mLog.setText("Starting service…\n");
         startService(serviceIntent);
         mLog.append("Binding service…\n");
